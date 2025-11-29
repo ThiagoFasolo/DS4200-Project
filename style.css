@@ -102,3 +102,26 @@ h2 {
     font-size: 1rem;
     opacity: 1;
 }
+
+h3 {
+    color: #2a5298;
+    margin-top: 1.5rem;
+    margin-bottom: 0.8rem;
+    font-size: 1.3rem;
+}
+
+h4 {
+    color: #555;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+/* Info Boxes */
+.info-box{
+    background-color: #e3f2fd;
+    border-left: 4px solid #2196F3;
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 4px;
+}
