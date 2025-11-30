@@ -13,7 +13,7 @@
             <nav>
                 <ul>
                     <li><a href="Home.html">Home</a></li>
-                    <li><a href="Data_Cleaning.html" class = "active">Data Cleaning</a></li>
+                    <li><a href="Data_Cleaning.html" class="active">Data Cleaning</a></li>
                     <li><a href="RR.html">Risk & Return</a></li>
                     <li><a href="Temporal.html">Temporal Analysis</a></li>
                     <li><a href="Size.html">Size & Distribution</a></li>
@@ -23,25 +23,26 @@
         </div>
     </header>
 
-
-
     <main>
         <div class="container">
             <div class="content-card">
                 <h2>Data Cleaning</h2>
                 <p>
-                    INSERT INFO HERE
-                </p>
-
-                <p>
-                    INSERT INFO HERE
+                    Our data cleaning process followed a structured workflow to ensure the final dataset was 
+                    consistent, accurate, and fully analysis-ready. We began by selecting only the essential 
+                    profile and return columns, filtering each dataset to keep the fields actually present and 
+                    prevent KeyErrors. After subsetting and copying these fields into clean DataFrames, we performed 
+                    an inner merge on Fund ID to retain only funds appearing in both sources with complete core information. 
+                    We then standardized data types by converting Inception Date to datetime, stripping percentage signs
+                     and commas from all return-related fields, and converting them into numeric values. Fund ID was cast 
+                     to a string for consistency across joins, while descriptive fields such as fund name, structure, 
+                     strategies, and geographic information were stored as categorical variables to streamline filtering 
+                     and improve efficiency. Finally, we removed all rows containing missing values to ensure that only 
+                     fully complete and reliable fund records remained. This end-to-end process produced a clean, unified 
+                     dataset suitable for accurate modeling, comparison, and visualization.
                 </p>
             </div>
-            
 
-
-
-            
             <div class="container">
                 <div class="content-card">
                     <h2>Data Cleaning</h2>
@@ -53,28 +54,36 @@
                         INSERT INFO HERE
                     </p>
                 </div>
-    
 
             <div class="content-card">
-                <h2>Column Names</h2>
+                <h2>Sources</h2>
                 <div class="info-box">
-                    <h4>Trial</h4>
+                    <h4>
+                        <a href="https://research.ebsco.com/linkprocessor/plink?id=d02413b3-e45a-323b-a161-dc4d740258a7" target="_blank">
+                            Hedge Fund Returns and Uncertainty — By: Timothy Krause
+                        </a>
+                    </h4>
                     <p>
-                        Trial
+                        This paper by Timothy Krause showing that hedge fund returns are linked to market uncertainty using 
+                        the VVIX index (volatility) as a simple proxy. Funds most sensitive to VVIX outperform the least 
+                        sensitive by ~5.97% per year. We may be able to similarly investigate the most volatile funds and 
+                        whether they outperform less volatile funds.
                     </p>
                 </div>
                 <div class="green-box">
-                    <h4>Trial</h4>
+                    <h4>
+                        <a href="https://research.ebsco.com/linkprocessor/plink?id=18065a5e-4345-3264-b173-c3af2655fb96" target="_blank">
+                            Measuring Risk in the Hedge Fund Sector By: Tobias Adrian
+                        </a>
+                    </h4>
                     <p>
-                        Trial
+                        This paper shows that hedge fund returns are closely tied to volatility and to covariances across funds, 
+                        and compares correlations/volatilities around the 1998 Long Term Capital Management LP crisis with equity-market 
+                        behavior before the crisis. The takeaway is that sector-wide co-movement and volatility are 
+                        key to understanding hedge fund risk.
                     </p>
                 </div>
             </div>
-    
-
-
-
-
             <div class="content-card">
                 <h2>Dataset Overview</h2>
                 <div class="stats-grid">
@@ -83,19 +92,19 @@
                         <div class="stat-label">Number of Nan</div>
                     </div>
                     <div class="stat-card">
-                        <div class="stat-value" id="strategy-count">-</div>
+                        <div class="stat-value" id="strategy-count">29</div>
                         <div class="stat-label">Number of Columns</div>
                     </div>
                     <div class="stat-card">
-                        <div class="stat-value" id="country-count">-</div>
+                        <div class="stat-value" id="country-count">7830</div>
                         <div class="stat-label">Final Fund Count</div>
                     </div>
                     <div class="stat-card">
                         <div class="stat-value" id="time-period">-</div>
                         <div class="stat-label">Data Completeness</div>
                     </div>
-
                 </div>
+
                 <h3>Data Preview</h3>
                 <p>
                     MAYBE INSERT INTERACTIVE TABLE???
@@ -106,7 +115,7 @@
 
     <footer>
         <div class="container">
-            <p> Contact Info - HERE</p>
+            <p>Contact Info - HERE</p>
         </div>
     </footer>
                 
