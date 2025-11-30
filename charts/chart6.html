@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    #vis.vega-embed {
+      width: 100%;
+      display: flex;
+    }
+
+    #vis.vega-embed details,
+    #vis.vega-embed details summary {
+      position: relative;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@5.20.1"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script>
+    (function(vegaEmbed) {
+      var spec = {"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}, "axis": {"labelFontSize": 11}}, "data": {"name": "data-cb748e5b2065ecbcbdc0f33f16c751b8"}, "mark": {"type": "rect"}, "encoding": {"color": {"field": "Normalized", "scale": {"scheme": "viridis"}, "title": "Score (0-1)", "type": "quantitative"}, "tooltip": [{"field": "Strategy", "type": "nominal"}, {"field": "Metric", "type": "nominal"}, {"field": "Value", "format": ".2f", "type": "quantitative"}], "x": {"axis": {"labelAngle": -45}, "field": "Metric", "title": null, "type": "nominal"}, "y": {"field": "Strategy", "title": "Strategy", "type": "nominal"}}, "height": 400, "title": "Strategy Heatmap: No Single Strategy Dominates All Metrics", "width": 600, "$schema": "https://vega.github.io/schema/vega-lite/v5.20.1.json", "datasets": {"data-cb748e5b2065ecbcbdc0f33f16c751b8": [{"Strategy": "-", "Metric": "Returns", "Value": 7.916363636363636, "Normalized": 0.16034768985251752}, {"Strategy": "CTA", "Metric": "Returns", "Value": 4.007725752508361, "Normalized": 0.021884308451426207}, {"Strategy": "Digital Assets", "Metric": "Returns", "Value": 31.618636363636366, "Normalized": 1.0}, {"Strategy": "Equity", "Metric": "Returns", "Value": 7.060114416475972, "Normalized": 0.13001508656956717}, {"Strategy": "Event Driven", "Metric": "Returns", "Value": 5.925079365079364, "Normalized": 0.08980650345310805}, {"Strategy": "Fixed Income/Credit", "Metric": "Returns", "Value": 3.389960707269155, "Normalized": 0.0}, {"Strategy": "Macro", "Metric": "Returns", "Value": 5.740963302752293, "Normalized": 0.08328419739212421}, {"Strategy": "Multi-Strategy", "Metric": "Returns", "Value": 4.499481707317073, "Normalized": 0.03930474860224824}, {"Strategy": "Other", "Metric": "Returns", "Value": 5.41949494949495, "Normalized": 0.07189619048841266}, {"Strategy": "Relative Value", "Metric": "Returns", "Value": 4.39551948051948, "Normalized": 0.035621889793597636}, {"Strategy": "-", "Metric": "Sharpe", "Value": 0.5609090909090909, "Normalized": 0.19308233382918033}, {"Strategy": "CTA", "Metric": "Sharpe", "Value": 0.31662207357859534, "Normalized": 0.0}, {"Strategy": "Digital Assets", "Metric": "Sharpe", "Value": 1.5818181818181818, "Normalized": 1.0}, {"Strategy": "Equity", "Metric": "Sharpe", "Value": 0.7042562929061784, "Normalized": 0.306382715535652}, {"Strategy": "Event Driven", "Metric": "Sharpe", "Value": 0.8761375661375661, "Normalized": 0.44223617897267276}, {"Strategy": "Fixed Income/Credit", "Metric": "Sharpe", "Value": 0.7703143418467583, "Normalized": 0.35859442288313503}, {"Strategy": "Macro", "Metric": "Sharpe", "Value": 0.7675688073394495, "Normalized": 0.356424376287648}, {"Strategy": "Multi-Strategy", "Metric": "Sharpe", "Value": 0.6737804878048781, "Normalized": 0.28229490424471715}, {"Strategy": "Other", "Metric": "Sharpe", "Value": 0.9660606060606061, "Normalized": 0.5133105676286419}, {"Strategy": "Relative Value", "Metric": "Sharpe", "Value": 0.592012987012987, "Normalized": 0.21766658278579032}, {"Strategy": "-", "Metric": "Sortino", "Value": 1.038181818181818, "Normalized": 0.07043845788209299}, {"Strategy": "CTA", "Metric": "Sortino", "Value": 0.5380602006688963, "Normalized": 0.0}, {"Strategy": "Digital Assets", "Metric": "Sortino", "Value": 7.638181818181818, "Normalized": 1.0}, {"Strategy": "Equity", "Metric": "Sortino", "Value": 1.5778146453089246, "Normalized": 0.14644177954295953}, {"Strategy": "Event Driven", "Metric": "Sortino", "Value": 1.674814814814815, "Normalized": 0.16010354123259496}, {"Strategy": "Fixed Income/Credit", "Metric": "Sortino", "Value": 2.1304518664047154, "Normalized": 0.22427667461471076}, {"Strategy": "Macro", "Metric": "Sortino", "Value": 1.8507798165137617, "Normalized": 0.1848869197686636}, {"Strategy": "Multi-Strategy", "Metric": "Sortino", "Value": 1.3598780487804878, "Normalized": 0.11574701003494409}, {"Strategy": "Other", "Metric": "Sortino", "Value": 1.525050505050505, "Normalized": 0.13901033778733193}, {"Strategy": "Relative Value", "Metric": "Sortino", "Value": 1.2738311688311688, "Normalized": 0.10362793875916781}, {"Strategy": "-", "Metric": "DD Protection", "Value": 30.496363636363636, "Normalized": 0.9999999999999998}, {"Strategy": "CTA", "Metric": "DD Protection", "Value": 27.529665551839468, "Normalized": 0.8223508812140448}, {"Strategy": "Digital Assets", "Metric": "DD Protection", "Value": 28.52227272727273, "Normalized": 0.8817892820867839}, {"Strategy": "Equity", "Metric": "DD Protection", "Value": 24.320480549199083, "Normalized": 0.6301813811512811}, {"Strategy": "Event Driven", "Metric": "DD Protection", "Value": 16.287566137566138, "Normalized": 0.1491617000607881}, {"Strategy": "Fixed Income/Credit", "Metric": "DD Protection", "Value": 13.796601178781925, "Normalized": 0.0}, {"Strategy": "Macro", "Metric": "DD Protection", "Value": 22.468853211009176, "Normalized": 0.5193039155050998}, {"Strategy": "Multi-Strategy", "Metric": "DD Protection", "Value": 17.943841463414635, "Normalized": 0.24834127402511985}, {"Strategy": "Other", "Metric": "DD Protection", "Value": 18.124848484848485, "Normalized": 0.2591801719970892}, {"Strategy": "Relative Value", "Metric": "DD Protection", "Value": 21.33616883116883, "Normalized": 0.4514775387696568}, {"Strategy": "-", "Metric": "Volatility", "Value": 15.567272727272728, "Normalized": 0.3786258651212318}, {"Strategy": "CTA", "Metric": "Volatility", "Value": 13.42351170568562, "Normalized": 0.3006395212395423}, {"Strategy": "Digital Assets", "Metric": "Volatility", "Value": 32.64818181818182, "Normalized": 1.0}, {"Strategy": "Equity", "Metric": "Volatility", "Value": 11.63562929061785, "Normalized": 0.23559942981261867}, {"Strategy": "Event Driven", "Metric": "Volatility", "Value": 8.083597883597884, "Normalized": 0.10638262812763438}, {"Strategy": "Fixed Income/Credit", "Metric": "Volatility", "Value": 5.159253438113949, "Normalized": 0.0}, {"Strategy": "Macro", "Metric": "Volatility", "Value": 10.59559633027523, "Normalized": 0.19776481705642462}, {"Strategy": "Multi-Strategy", "Metric": "Volatility", "Value": 7.912530487804878, "Normalized": 0.10015949009082947}, {"Strategy": "Other", "Metric": "Volatility", "Value": 8.761414141414141, "Normalized": 0.13104041938252153}, {"Strategy": "Relative Value", "Metric": "Volatility", "Value": 8.902467532467533, "Normalized": 0.13617169947838986}]}};
+      var embedOpt = {"mode": "vega-lite"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+  </script>
+</body>
+</html>
