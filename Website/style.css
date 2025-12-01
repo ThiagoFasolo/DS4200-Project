@@ -17,7 +17,7 @@ header {
     color: white;
     padding: 1rem 0;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    position: sticky;
+    position: relative;
     top: 0;
 }
 
@@ -84,8 +84,22 @@ h2 {
     margin: 1.5rem 0;
 }
 
-.stat-card {
+.stat-card-blue {
     background: linear-gradient(135deg, #373B44 0%, #4286f4 100%);
+    color: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+}
+.stat-card-red {
+    background: linear-gradient(135deg, #333333 0%, #dd1818 100%);
+    color: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+}
+.stat-card-green {
+    background: linear-gradient(135deg, #1f4037 0%, #99f2c8 100%);
     color: white;
     padding: 1.5rem;
     border-radius: 8px;

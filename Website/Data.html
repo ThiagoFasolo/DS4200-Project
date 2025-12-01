@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hedge Fund Performance Analysis</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Hedge Fund Performance Analysis</h1>
+            <nav>
+                <ul>
+                    <li><a href="Home.html">Home</a></li>
+                    <li><a href="Data.html" class="active">Data</a></li>
+                    <li><a href="visualizations.html">Visualizations</a></li>
+                    <li><a href="Conclusion.html">Conclusions</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="content-card">
+                <h2>Raw Data Overview</h2>
+                <div class="stats-grid">
+                    <div class="stat-card-red">
+                        <div class="stat-value">2</div>
+                        <div class="stat-label">Number of Files</div>
+                    </div>
+                    <div class="stat-card-red">
+                        <div class="stat-value">7830</div>
+                        <div class="stat-label">Number Funds</div>
+                    </div>
+                    <div class="stat-card-red">
+                        <div class="stat-value">166</div>
+                        <div class="stat-label">Number of Columns</div>
+                    </div>
+                    <div class="stat-card-red">
+                        <div class="stat-value">9,959</div>
+                        <div class="stat-label">Missing Values</div>
+                    </div>
+                </div>
+            </div>
+            <div class="content-card">
+                <h2>Data Cleaning and Preparation</h2>
+                <p>
+                    The initial dataset consisted of two separate files: one containing fund performance metrics and another with fund profiles. To prepare the data for analysis, we performed a series of cleaning and transformation steps to create a unified, analysis-ready dataset.
+                </p>
+
+                <h3>1. Data Loading and Initial Assessment</h3>
+                <p>
+                    We began by loading two CSV files into pandas DataFrames:
+                    <ul>
+                        <li><b>Fund Performance:</b> Contained 83 columns with metrics like monthly returns, Sharpe ratio, and assets under management (AuM).</li>
+                        <li><b>Fund Profiles:</b> Included 61 columns of descriptive information such as fund name, manager name, inception date, and investment strategy.</li>
+                    </ul>
+                </p>
+
+                <h3>2. Feature Selection</h3>
+                <p>
+                    To create a focused and manageable dataset, we selected a subset of relevant columns from each file. This step was crucial to remove redundant or unnecessary data.
+                </p>
+
+                <h3>3. Merging Datasets</h3>
+                <p>
+                    The two DataFrames were merged using an inner join on 'Fund ID'. This ensured that the resulting dataset only contained funds for which we had both profile and performance information, creating a complete record for each entry.
+                </p>
+
+                <h3>4. Data Transformation and Type Conversion</h3>
+                <p>
+                    We performed several transformations to standardize the data types. The 'Inception Date' was converted to a proper datetime format. All return-related columns, which were originally strings with percentage signs and commas, were converted to numeric types to allow for calculations. Categorical fields were also appropriately typed to improve memory efficiency.
+                </p>
+
+                <h3>5. Handling Missing Values</h3>
+                <p>
+                    Finally, we removed any rows that contained missing values (NaNs). This step was critical to ensure the quality and reliability of our analysis, leaving us with a clean and complete dataset of 7,830 funds and 29 columns.
+                </p>
+            </div>
+
+            <div class="content-card">
+                <h2>Dataset Overview</h2>
+                <div class="stats-grid">
+                    <div class="stat-card-green">
+                        <div class="stat-value">7,830</div>
+                        <div class="stat-label">Final Fund Count</div>
+                    </div>
+                    <div class="stat-card-green">
+                        <div class="stat-value">29</div>
+                        <div class="stat-label">Number of Columns</div>
+                    </div>
+                    <div class="stat-card-green">
+                        <div class="stat-value">100%</div>
+                        <div class="stat-label">Data Completeness</div>
+                    </div>
+                </div>
+            </div>
+            <div class="content-card">
+                <h2>Data Preview</h2>
+                <p>
+                    Below is an interactive table displaying the cleaned dataset with all 7,830 hedge funds. You can scroll through to explore fund names, managers, strategies, performance metrics, and monthly returns.
+                </p>
+                <iframe src="website_chart.html" id = "myTable" style="width: 100%; height: 600px"></iframe>
+            </div>
+
+            <div class="content-card">
+                <h2>Sources</h2>
+                <div class="info-box">
+                    <h4>
+                        <a href="https://research.ebsco.com/linkprocessor/plink?id=d02413b3-e45a-323b-a161-dc4d740258a7" target="_blank">
+                            Hedge Fund Returns and Uncertainty — By: Timothy Krause
+                        </a>
+                    </h4>
+                    <p>
+                        This paper by Timothy Krause showing that hedge fund returns are linked to market uncertainty using 
+                        the VVIX index (volatility) as a simple proxy. Funds most sensitive to VVIX outperform the least 
+                        sensitive by ~5.97% per year. We may be able to similarly investigate the most volatile funds and 
+                        whether they outperform less volatile funds.
+                    </p>
+                </div>
+                <div class="green-box">
+                    <h4>
+                        <a href="https://research.ebsco.com/linkprocessor/plink?id=18065a5e-4345-3264-b173-c3af2655fb96" target="_blank">
+                            Measuring Risk in the Hedge Fund Sector By: Tobias Adrian
+                        </a>
+                    </h4>
+                    <p>
+                        This paper shows that hedge fund returns are closely tied to volatility and to covariances across funds, 
+                        and compares correlations/volatilities around the 1998 Long Term Capital Management LP crisis with equity-market 
+                        behavior before the crisis. The takeaway is that sector-wide co-movement and volatility are 
+                        key to understanding hedge fund risk.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>Contact Info - HERE</p>
+        </div>
+    </footer>
+                
+</body>
+</html>

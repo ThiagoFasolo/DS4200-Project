@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hedge Fund Performance Analysis</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Hedge Fund Performance Analysis</h1>
+            <nav>
+                <ul>
+                    <li><a href="Home.html">Home</a></li>
+                    <li><a href="Data.html">Data</a></li>
+                    <li><a href="visualizations.html" class="active">Visualizations</a></li>
+                    <li><a href="Conclusion.html">Conclusions</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+<main>
+    <div class="container">
+        <div class="content-card">
+            <h2>Risk & Return Analysis</h2>
+            <p>
+                Understanding the relationship between risk and return is fundamental to investment analysis. This page 
+                explores how different hedge fund strategies position themselves along the risk-return spectrum and 
+                evaluates their risk-adjusted performance using the Sharpe ratio. These visualizations help answer 
+                critical questions about whether higher risk leads to higher returns and which strategies deliver the 
+                best risk-adjusted performance.
+            </p>
+        </div>
+
+        <!-- Chart 1 -->
+        <div class="content-card">
+            <h2>Chart 1: Risk vs. Return by Fund</h2>
+            <div class="chart-description">
+                <p>
+                    This scatter plot visualizes the relationship between risk (annualized volatility) and return (annualized return) for individual hedge funds, colored by their investment strategy. Each point represents a fund, showing how different strategies position themselves along the risk-return spectrum.
+                </p>
+                <p>
+                    <strong>Key Question:</strong> Do higher-risk funds deliver higher returns, and which strategies achieve the most efficient risk-return tradeoffs?
+                </p>
+            </div>
+            
+            <div class="chart-container">
+                <iframe src="charts/chart1.html" width="100%" height="500"></iframe>
+            </div>
+
+            <div class="info-box">
+                <h3>Key Insights</h3>
+                <p>
+                    Funds show a wide range of risk-return tradeoffs, with some strategies delivering higher returns without taking proportionally more risk. Strategies like Relative Value and Multi-Strategy tend to cluster toward more efficient outcomes.
+                </p>
+            </div>
+        </div>
+
+        <!-- Chart 2 -->
+        <div class="content-card">
+            <h2>Chart 2: Sharpe Ratio by Strategy</h2>
+            <div class="chart-description">
+                <p>
+                    This box plot displays the distribution of Sharpe Ratios across different hedge fund strategies. The Sharpe Ratio measures risk-adjusted performance, showing how much excess return investors receive per unit of risk taken.
+                </p>
+                <p>
+                    <strong>Key Question:</strong> Which strategies consistently deliver the best risk-adjusted returns?
+                </p>
+            </div>
+            
+            <div class="chart-container">
+                <iframe src="charts/chart2.html" width="100%" height="500"></iframe>
+            </div>
+
+            <div class="info-box">
+                <h3>Key Insights</h3>
+                <p>
+                    Sharpe Ratios vary meaningfully across strategies, indicating large differences in risk-adjusted performance. A few strategies consistently outperform, while others show much lower and more volatile results.
+                </p>
+            </div>
+        </div>
+
+        <!-- Chart 3 -->
+        <div class="content-card">
+            <h2>Chart 3: Average Monthly Return by Strategy</h2>
+            <div class="chart-description">
+                <p>
+                    This heatmap shows the average monthly returns for each hedge fund strategy over time. The color intensity represents the magnitude of returns, allowing us to identify patterns of performance consistency and volatility across different market conditions.
+                </p>
+                <p>
+                    <strong>Key Question:</strong> How do strategies perform month-to-month, and are there periods when multiple strategies move together?
+                </p>
+            </div>
+            
+            <div class="chart-container">
+                <iframe src="charts/chart3.html" width="100%" height="500"></iframe>
+            </div>
+
+            <div class="info-box">
+                <h3>Key Insights</h3>
+                <p>
+                    Monthly returns exhibit clear clusters where multiple strategies perform well or poorly at the same time, suggesting exposure to shared market conditions. Some strategies show more stable month-to-month behavior than others.
+                </p>
+            </div>
+        </div>
+
+        <!-- Chart 4 -->
+        <div class="content-card">
+            <h2>Chart 4: Fund Size vs. Sharpe Ratio</h2>
+            <div class="chart-description">
+                <p>
+                    This scatter plot examines the relationship between fund size (assets under management) and risk-adjusted performance (Sharpe Ratio). It helps determine whether larger funds have an advantage in delivering better risk-adjusted returns.
+                </p>
+                <p>
+                    <strong>Key Question:</strong> Does fund size correlate with better risk-adjusted performance?
+                </p>
+            </div>
+            
+            <div class="chart-container">
+                <iframe src="charts/chart4.html" width="100%" height="500"></iframe>
+            </div>
+
+            <div class="info-box">
+                <h3>Key Insights</h3>
+                <p>
+                    There is only a weak relationship between fund size and Sharpe Ratio: Larger funds do not reliably deliver stronger performance. This suggests that scale alone does not determine risk-adjusted results.
+                </p>
+            </div>
+        </div>
+
+        <!-- Chart 5 -->
+        <div class="content-card">
+            <h2>Chart 5: Distribution of Annualized Returns</h2>
+            <div class="chart-description">
+                <p>
+                    This histogram displays the distribution of annualized returns across all hedge funds in the dataset. It reveals the spread of performance outcomes and helps identify the typical range of returns investors can expect.
+                </p>
+                <p>
+                    <strong>Key Question:</strong> What is the typical range of returns, and how many funds significantly outperform or underperform?
+                </p>
+            </div>
+            
+            <div class="chart-container">
+                <iframe src="charts/chart5.html" width="100%" height="500"></iframe>
+            </div>
+
+            <div class="info-box">
+                <h3>Key Insights</h3>
+                <p>
+                    The distribution of returns is skewed, with many funds clustered near modest positive performance and a tail of both outperformers and underperformers. The gap between mean and median highlights the influence of a few high-return funds.
+                </p>
+            </div>
+        </div>
+
+        <!-- Chart 6 -->
+        <div class="content-card">
+            <h2>Chart 6: Strategy Performance Scorecard</h2>
+            <div class="chart-description">
+                <p>
+                    This multi-metric comparison table provides a comprehensive view of how each strategy performs across key dimensions: returns, volatility, Sharpe Ratio, and other risk metrics. It enables side-by-side evaluation of strategy strengths and weaknesses.
+                </p>
+                <p>
+                    <strong>Key Question:</strong> Which strategies lead across multiple performance dimensions, and where do tradeoffs exist?
+                </p>
+            </div>
+            
+            <div class="chart-container">
+                <iframe src="charts/chart6.html" width="100%" height="500"></iframe>
+            </div>
+
+            <div class="info-box">
+                <h3>Key Insights</h3>
+                <p>
+                    No single strategy leads across all performance metrics; strengths in one dimension often come with weaknesses in another. This reinforces the importance of evaluating strategies across multiple measures rather than relying on a single indicator.
+                </p>
+            </div>
+        </div>
+
+        <!-- Chart 7 (D3) -->
+        <div class="content-card">
+            <h2>Chart 7: Strategy-Level Summary (Interactive)</h2>
+            <div class="chart-description">
+                <p>
+                    This interactive bar chart allows you to switch between different performance metrics (Sharpe Ratio, Annualized Return, and Annualized Volatility) to compare strategies dynamically. The dropdown menu enables quick exploration of how strategy rankings change based on the selected metric.
+                </p>
+                <p>
+                    <strong>Key Question:</strong> How do strategy rankings shift when we prioritize different performance metrics?
+                </p>
+            </div>
+            
+            <div id="controls" style="margin: 16px 0;">
+                <strong>Metric:</strong>
+                <select id="metric-select">
+                    <option value="sharpe">Average Sharpe Ratio</option>
+                    <option value="return">Average Annualized Return (%)</option>
+                    <option value="vol">Average Annualized Volatility (%)</option>
+                </select>
+            </div>
+            <div id="chart"></div>
+            <div class="tooltip" id="tooltip" style="
+                position:absolute;
+                padding:6px 10px;
+                background:white;
+                border:1px solid #ccc;
+                border-radius:4px;
+                font-size:12px;
+                pointer-events:none;
+                opacity:0;
+            "></div>
+
+            <div class="info-box">
+                <h3>Key Insights</h3>
+                <p>
+                    Switching between metrics reveals that strategy rankings shift depending on whether returns, risk, or risk-adjusted performance is prioritized. The dropdown interaction highlights these tradeoffs and helps compare strategies more directly.
+                </p>
+            </div>
+        </div>
+
+        <div class="content-card">
+            <h2>Understanding the Sharpe Ratio</h2>
+            <div class="orange-box">
+                <h3>What is the Sharpe Ratio?</h3>
+                <p>
+                    The Sharpe Ratio is calculated as: <strong>(Fund Return - Risk-Free Rate) / Standard Deviation</strong>
+                </p>
+                <p>
+                    It measures how much excess return an investor receives for the extra volatility they endure by holding 
+                    a risky asset. A higher Sharpe ratio indicates better risk-adjusted performance. Generally:
+                </p>
+                <ul>
+                    <li><strong>Below 1.0</strong> - Suboptimal risk-adjusted returns</li>
+                    <li><strong>1.0 to 2.0</strong> - Good risk-adjusted returns</li>
+                    <li><strong>Above 2.0</strong> - Excellent risk-adjusted returns</li>
+                    <li><strong>Above 3.0</strong> - Exceptional risk-adjusted returns (rare)</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <div class="container">
+        <p>Contact Info - HERE</p>
+    </div>
+</footer>
+</body>
+</html>
